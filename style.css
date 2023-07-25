@@ -58,7 +58,6 @@ body {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   position: relative; 
-
 }
 
 .card .description {
@@ -96,7 +95,8 @@ body {
   color: white;
 }
 
-.card:hover .description {
+.card:hover .description,
+.card.hovered .description {
   display: block;
 }
 
@@ -129,7 +129,8 @@ body {
     margin-left: 0;
     margin-right: 0;
   }
+
   .card .description {
-    height: 160%;
+    height: 170%;
   }
 }
