@@ -1,0 +1,135 @@
+body {
+  background: #E6E6FA;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  color: #4B0082;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  border-radius: 20px;
+  border: 2px solid purple;
+  margin-bottom: 70px;
+  position: relative; 
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: plum;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.img-container img {
+  width: 170px;
+}
+
+.card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  background: #ededf3;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative; 
+
+}
+
+.card .description {
+  display: none; 
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  top: -20%;
+  left: -25%;
+  width: 150%;
+  height: 140%;
+  z-index: 1;
+}
+
+.card-body h3 {
+  color: #4B0082;
+}
+
+.card-body h3, 
+.card-body p {
+  margin: 0 0 5px 0;
+}
+
+.btn {
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid plum;
+  border-radius: 50%;
+  padding: 5px;
+  width: 50px;
+  text-align: center;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #DDA0DD, #FFFFFF);
+  color: white;
+}
+
+.card:hover .description {
+  display: block;
+}
+
+.description .card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 2px solid purple;
+}
+
+@media screen and (max-width: 800px) {
+  .cards-row > .card {
+    width: 35%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cards-row > .card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cards-row > .card {
+    width: 65%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .card .description {
+    height: 160%;
+  }
+}
